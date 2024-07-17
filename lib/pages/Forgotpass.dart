@@ -24,20 +24,34 @@ class _ForgotpasswordpageState extends State<Forgotpasswordpage> {
     try {
       await FirebaseAuth.instance
           .sendPasswordResetEmail(email: _emailcontroller.text.trim());
+
+      // Assuming the email was sent successfully
       showDialog(
-          context: context,
-          builder: (context) {
-            return AlertDialog(content: Text('Link Sent'));
-          });
+        context: context,
+        builder: (context) {
+          return AlertDialog(
+              content: Text('Password reset link sent to your email.'));
+        },
+      );
     } on FirebaseAuthException catch (e) {
-      // ScaffoldMessenger.of(context)
-      //     .showSnackBar(SnackBar(content: Text('${e}')));
+      String message;
+
+      // Check specific error code
+      if (e.code == 'user-not-found') {
+        message = 'No user found for that email.';
+      } else if (e.code == 'invalid-email') {
+        message = 'The email address is not valid.';
+      } else {
+        message = e.message ?? 'An unknown error occurred.';
+      }
+
       showDialog(
-          context: context,
-          builder: (context) {
-            return AlertDialog(content: Text(e.message.toString()));
-          });
-      print(e.message.toString());
+        context: context,
+        builder: (context) {
+          return AlertDialog(content: Text(message));
+        },
+      );
+      print(message);
     }
   }
 
@@ -45,7 +59,7 @@ class _ForgotpasswordpageState extends State<Forgotpasswordpage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          elevation: 10,
+          elevation: 100,
           shadowColor: Color.fromARGB(248, 128, 159, 236),
           backgroundColor: Color.fromARGB(255, 9, 1, 1),
           foregroundColor: Colors.white,

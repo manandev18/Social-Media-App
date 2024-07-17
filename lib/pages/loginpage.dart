@@ -150,28 +150,31 @@ class _LoginpageState extends State<Loginpage> {
                 SizedBox(
                   height: 15,
                 ),
-                GestureDetector(
-                  onTap: () => signin(emailcontroller, passwordcontroller),
-                  child: Container(
-                    padding: EdgeInsets.fromLTRB(15, 10, 15, 10),
-                    decoration: BoxDecoration(
-                        color: const Color.fromARGB(255, 0, 0, 0),
-                        borderRadius: BorderRadius.circular(20),
-                        boxShadow: [
-                          BoxShadow(
-                              color: Colors.black26,
-                              blurRadius: 10,
-                              spreadRadius: 12)
-                        ]),
-                    child: Text(
-                      'Sign in',
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 14),
+                Builder(builder: (context) {
+                  return GestureDetector(
+                    onTap: () =>
+                        signin(emailcontroller, passwordcontroller, context),
+                    child: Container(
+                      padding: EdgeInsets.fromLTRB(15, 10, 15, 10),
+                      decoration: BoxDecoration(
+                          color: const Color.fromARGB(255, 0, 0, 0),
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: [
+                            BoxShadow(
+                                color: Colors.black26,
+                                blurRadius: 10,
+                                spreadRadius: 12)
+                          ]),
+                      child: Text(
+                        'Sign in',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 14),
+                      ),
                     ),
-                  ),
-                ),
+                  );
+                }),
                 SizedBox(height: 10),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,

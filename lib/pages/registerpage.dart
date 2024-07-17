@@ -26,14 +26,13 @@ class _RegisterpageState extends State<Registerpage> {
     super.dispose();
   }
 
-  bool ismatch() {
+  Future ismatch() async {
     if (_passwordcontroller.text.trim() ==
         _Confirmpasswordcontroller.text.trim()) {
-      return true;
+      await signup(_emailcontroller, _passwordcontroller, _namecontroller);
     } else {
       ScaffoldMessenger.of(context)
           .showSnackBar(SnackBar(content: Text('Password not matched')));
-      return false;
     }
   }
 
@@ -181,8 +180,7 @@ class _RegisterpageState extends State<Registerpage> {
                   height: 15,
                 ),
                 GestureDetector(
-                  onTap: () async => signup(
-                      _emailcontroller, _passwordcontroller, await ismatch()),
+                  onTap: ismatch,
                   child: Container(
                     padding: EdgeInsets.fromLTRB(15, 10, 15, 10),
                     decoration: BoxDecoration(
