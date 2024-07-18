@@ -36,7 +36,7 @@ class _LoginpageState extends State<Loginpage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SizedBox(
-                  height: 30,
+                  height: 60,
                 ),
                 Icon(
                   Icons.laptop,
@@ -59,10 +59,10 @@ class _LoginpageState extends State<Loginpage> {
                 Text(
                   'Glad to see you again',
                   style:
-                      GoogleFonts.notoSans(fontSize: 16, color: Colors.white),
+                      GoogleFonts.notoSans(fontSize: 20, color: Colors.white),
                 ),
                 SizedBox(
-                  height: 10,
+                  height: 20,
                 ),
                 Container(
                   padding: EdgeInsets.all(20),
@@ -141,6 +141,7 @@ class _LoginpageState extends State<Loginpage> {
                           'Forgot password',
                           style: TextStyle(
                               color: Color.fromARGB(255, 131, 79, 219),
+                              fontSize: 16,
                               fontWeight: FontWeight.bold),
                         ),
                       ),
@@ -170,25 +171,25 @@ class _LoginpageState extends State<Loginpage> {
                         style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
-                            fontSize: 14),
+                            fontSize: 20),
                       ),
                     ),
                   );
                 }),
-                SizedBox(height: 10),
+                SizedBox(height: 30),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
                       "Don't have an account ?",
-                      style: TextStyle(fontSize: 16, color: Colors.white),
+                      style: TextStyle(fontSize: 20, color: Colors.white),
                     ),
                     InkWell(
                       onTap: widget.showregpage,
                       child: Text(' Sign up',
                           style: TextStyle(
                               color: Color.fromARGB(255, 3, 89, 239),
-                              fontSize: 16,
+                              fontSize: 20,
                               fontWeight: FontWeight.bold)),
                     )
                   ],

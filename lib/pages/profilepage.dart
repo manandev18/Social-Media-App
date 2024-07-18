@@ -48,7 +48,7 @@ class _ProfilepageState extends State<Profilepage> {
         foregroundColor: Colors.white,
         title: Text(
           'Profile',
-          style: TextStyle(color: Colors.white, fontSize: 18, shadows: [
+          style: TextStyle(color: Colors.white, fontSize: 25, shadows: [
             Shadow(
               color: Colors.red,
               blurRadius: 4,

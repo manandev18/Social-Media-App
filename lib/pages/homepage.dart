@@ -77,7 +77,7 @@ class _HomepageState extends State<Homepage> {
                     'Profile',
                     style: TextStyle(
                         color: Colors.white,
-                        fontSize: 18,
+                        fontSize: 25,
                         shadows: [Shadow(color: Colors.red, blurRadius: 4)]),
                   ),
                 ],
@@ -99,7 +99,7 @@ class _HomepageState extends State<Homepage> {
                   blurRadius: 0.5,
                 )
               ],
-              fontSize: 20),
+              fontSize: 25),
         ),
         actions: [
           InkWell(

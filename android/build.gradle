@@ -1,5 +1,13 @@
-plugins{
-    id 'com.google.gms.google-services' version '4.4.2' apply false
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        // Ensure consistency
+        classpath 'com.google.gms:google-services:4.3.15'
+        classpath 'com.android.tools.build:gradle:7.3.0'
+    }
 }
 
 allprojects {

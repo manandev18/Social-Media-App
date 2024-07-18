@@ -47,7 +47,7 @@ class _RegisterpageState extends State<Registerpage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SizedBox(
-                  height: 15,
+                  height: 40,
                 ),
                 Icon(
                   Icons.ad_units_rounded,
@@ -65,17 +65,17 @@ class _RegisterpageState extends State<Registerpage> {
                 Text(
                   'Join with Us',
                   style: GoogleFonts.notoSans(
-                      fontSize: 15,
+                      fontSize: 20,
                       fontWeight: FontWeight.bold,
                       color: Colors.white),
                 ),
                 SizedBox(
-                  height: 5,
+                  height: 15,
                 ),
                 Container(
                   padding: EdgeInsets.all(20),
                   margin: EdgeInsets.all(20),
-                  height: 280,
+                  height: 300,
                   width: 350,
                   decoration: BoxDecoration(
                     boxShadow: [
@@ -197,24 +197,24 @@ class _RegisterpageState extends State<Registerpage> {
                       style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
-                          fontSize: 14),
+                          fontSize: 20),
                     ),
                   ),
                 ),
-                SizedBox(height: 10),
+                SizedBox(height: 20),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
                       "Already have an account ?",
-                      style: TextStyle(fontSize: 16, color: Colors.white),
+                      style: TextStyle(fontSize: 20, color: Colors.white),
                     ),
                     InkWell(
                       onTap: widget.showloginpage,
                       child: Text(' Sign in',
                           style: TextStyle(
                               color: const Color.fromARGB(255, 48, 121, 247),
-                              fontSize: 16,
+                              fontSize: 20,
                               fontWeight: FontWeight.bold)),
                     )
                   ],

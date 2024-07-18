@@ -59,7 +59,10 @@ class _ForgotpasswordpageState extends State<Forgotpasswordpage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          elevation: 100,
+          centerTitle: true,
+          title: Text('Reset Password',
+              style: TextStyle(color: Colors.white, fontSize: 22)),
+          elevation: 20,
           shadowColor: Color.fromARGB(248, 128, 159, 236),
           backgroundColor: Color.fromARGB(255, 9, 1, 1),
           foregroundColor: Colors.white,
@@ -72,7 +75,7 @@ class _ForgotpasswordpageState extends State<Forgotpasswordpage> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 SizedBox(
-                  height: 50,
+                  height: 80,
                 ),
                 Icon(
                   Icons.lock_open,
