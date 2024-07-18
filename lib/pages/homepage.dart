@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:todo/pages/Chatpage.dart';
 import 'package:todo/pages/Usertile.dart';
 import 'package:todo/pages/loginpage.dart';
+import 'package:todo/pages/drawer.dart';
+import 'package:todo/pages/profilepage.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -30,6 +32,60 @@ class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(
+        width: 200,
+        backgroundColor: Colors.grey[850],
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Icon(
+              Icons.house,
+              color: Colors.white,
+              shadows: [
+                Shadow(
+                  color: Colors.red,
+                  blurRadius: 2,
+                ),
+              ],
+              size: 50,
+            ),
+            SizedBox(
+              height: 40,
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => Profilepage(context: context)));
+              },
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                    Icons.person,
+                    color: Colors.white,
+                    size: 30,
+                    shadows: [Shadow(color: Colors.red, blurRadius: 2)],
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text(
+                    'Profile',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18,
+                        shadows: [Shadow(color: Colors.red, blurRadius: 4)]),
+                  ),
+                ],
+              ),
+            )
+          ],
+        ),
+      ),
       backgroundColor: Color.fromARGB(255, 50, 48, 48),
       appBar: AppBar(
         centerTitle: true,
@@ -40,7 +96,7 @@ class _HomepageState extends State<Homepage> {
               shadows: [
                 Shadow(
                   color: Colors.red,
-                  blurRadius: 6,
+                  blurRadius: 0.5,
                 )
               ],
               fontSize: 20),

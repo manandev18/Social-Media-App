@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:todo/firebase_options.dart';
-import '';
+
 import 'package:flutter/material.dart';
 import 'package:todo/pages/loginpage.dart';
 import 'package:todo/pages/mainpage.dart';

@@ -15,7 +15,7 @@ class UserTile extends StatelessWidget {
         boxShadow: [
           BoxShadow(
             color: Colors.white,
-            blurRadius: 6.0,
+            blurRadius: 2.0,
             offset: Offset(0, 2),
           ),
         ],
@@ -33,7 +33,7 @@ class UserTile extends StatelessWidget {
         leading: Icon(
           Icons.person,
           color: Colors.white,
-          shadows: [Shadow(color: Colors.red, blurRadius: 10)],
+          shadows: [Shadow(color: Colors.red, blurRadius: 5)],
         ),
         textColor: Colors.white,
         title: Text(userData['name'] ?? 'No Name'),
