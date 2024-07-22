@@ -16,7 +16,7 @@ This app provides a real time chat experience with mimalistic design and feature
 
 1. **Clone the repository:**
     ```sh
-    git clone https://github.com/yourusername/minimal-chat-app.git
+    git clone https://github.com/manandev18/minimal-chat-app.git
     cd minimal-chat-app
     ```
 
