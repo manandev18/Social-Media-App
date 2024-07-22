@@ -76,4 +76,5 @@ This app provides a real time chat experience with mimalistic design and feature
 4. Push to the branch (`git push origin feature/manandev18`)
 5. Create a new Pull Request
 
-
+## LICENSE
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
